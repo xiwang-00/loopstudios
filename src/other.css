@@ -1,0 +1,55 @@
+body {
+	overflow-x: hidden;
+}
+
+.site-header__inner {
+	align-items: center;
+}
+
+@media only screen and (max-width: 639px) {
+	.navbar {
+		display: none;
+		position: absolute;
+		z-index: 10;
+		top: 140px;
+		right: 0;
+		width: 80%;
+		height: 100vh;
+		background-color: black;
+		transition: all 0.5s ease;
+	}
+}
+
+.open {
+	display: block;
+}
+
+.open > .navbar__list {
+	flex-direction: column;
+	padding-top: 100px;
+}
+
+.open > .navbar__list > .navbar__item {
+	margin: 0;
+	margin-bottom: 30px;
+}
+
+.open > .navbar__list > .navbar__item > .navbar__link {
+	font-size: 32px;
+}
+
+.navbar__list {
+	margin-top: -12px;
+}
+
+.noline {
+	display: none;
+}
+
+.open ~ .btn > .line {
+	display: none;
+}
+
+.open ~ .btn > .noline {
+	display: block;
+}
